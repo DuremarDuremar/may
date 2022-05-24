@@ -9,7 +9,7 @@ const Login = () => {
 
   const { email, token, id } = useTypeSelector((state) => state.userReducer);
 
-  const handleLogin = (email: any, password: any) => {
+  const handleLogin = (email: string, password: string) => {
     const auth = getAuth();
     signInWithEmailAndPassword(auth, email, password)
       .then(console.log)

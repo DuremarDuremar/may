@@ -1,5 +1,5 @@
 import React from "react";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
 import { useTypeDispatch, useTypeSelector } from "../hooks/redux";
 import Form from "./form";
@@ -9,9 +9,9 @@ const SignUp = () => {
 
   const { email, token, id } = useTypeSelector((state) => state.userReducer);
 
-  const handleReg = (email: any, password: any) => {
+  const handleReg = (email: string, password: string) => {
     const auth = getAuth();
-    signInWithEmailAndPassword(auth, email, password)
+    createUserWithEmailAndPassword(auth, email, password)
       .then(console.log)
       .catch(console.error);
   };
