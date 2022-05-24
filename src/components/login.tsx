@@ -2,7 +2,7 @@ import React from "react";
 import Form from "./form";
 
 const Login = () => {
-  const handleLogin = 234;
+  const handleLogin = () => {};
 
   return <Form handleClick={handleLogin} title="login" />;
 };

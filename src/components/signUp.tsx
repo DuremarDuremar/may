@@ -1,7 +1,10 @@
 import React from "react";
+import Form from "./form";
 
 const SignUp = () => {
-  return <div>SignUp</div>;
+  const handleLogin = () => {};
+
+  return <Form handleClick={handleLogin} title="register" />;
 };
 
 export default SignUp;
