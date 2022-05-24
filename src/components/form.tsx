@@ -3,7 +3,8 @@ import { useState } from "react";
 
 interface FormProps {
   title: string;
-  handleClick: React.MouseEventHandler<HTMLButtonElement>;
+  handleClick: any;
+  // React.MouseEventHandler<HTMLButtonElement>
 }
 
 const Form: FC<FormProps> = ({ title, handleClick }) => {
@@ -24,7 +25,7 @@ const Form: FC<FormProps> = ({ title, handleClick }) => {
         onChange={(e) => setPass(e.target.value)}
         placeholder="password"
       />
-      <button onClick={handleClick}>{title}</button>
+      <button onClick={() => handleClick(email, pass)}>{title}</button>
     </div>
   );
 };
