@@ -9,7 +9,7 @@ interface FormProps {
 
 const Form: FC<FormProps> = ({ title, handleClick }) => {
   const [email, setEmail] = useState("");
-  const [pass, setPass] = useState("");
+  const [pass, setPass] = useState<number | string>("");
 
   return (
     <div>
